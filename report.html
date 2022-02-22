@@ -5,34 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Internet e a Web</title>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(images/wallpaper.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: aquamarine;
+        }
+
+        #menu {
+            display: block;
+            padding: 15px 15px;
+            background-color: #FFF;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        #menu h1 {
+            font-family: 'Courier New', monospace;
+        }
+
+        .card {
+            display: block;
+            margin: 30px auto;
+            width: auto;
+            max-width: 700px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #FFF;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .card h2 {
+            text-align: center;
+            padding: 10px 0 20px 0;
+        }
+
+        .card img {
+            display: block;
+            margin: 15px auto;
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        .card img.shadow {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        footer {
+            padding: 30px 10px;
+            background-color: #FFF;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        footer p{
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
 </head>
 <body>
-    <h1>A Internet e a Web</h1>
-    <p><a href="index.html">Programação Web</a> | <a href="report.html">A Internet e a Web</a></p>
+    <div id="menu">
+        <h1>A Internet e a Web</h1>
+        <p><a href="index.html">Programação Web</a> | <a href="report.html">A Internet e a Web</a></p>
+    </div>
 
-    <br />
+    <div class="card">
+        <h2>IP Lookup</h2>
+        <p>A primeira tarefa baseia-se em obter o enedereço IP do computador utilizado em aula e verificar a localização do mesmo.</p>
+        <img class="shadow" src="images/IP-local.png" />
+        <p>Na imagem acima conseguimos perceber a falta de extadião na localização do computador, visto que o enedereço IP aparentemente se localiza em Oeiras.</p>
+        <br />
+        <p>Logo de seguida, verificamos a localização do anfitrião da nossa <a href="https://a22004275-pw-lab1.herokuapp.com">página web</a>.</p>
+        <img class="shadow" src="images/IP-site.png" />
+        <p>Uma localização estranha visto que mais tarde vamos a perceber que a real lozalização é bem mais perto, na Alemanha.</p>
+    </div>
 
-    <h2>IP Lookup</h2>
-    <p>A primeira tarefa baseia-se em obter o enedereço IP do computador utilizado em aula e verificar a localização do mesmo.</p>
-    <img src="images/IP-local.png" height="350px" />
-    <p>Na imagem acima conseguimos perceber a falta de extadião na localização do computador, uma vez que o enedereço IP aparentemente se localiza em Oeiras.</p>
-    <br />
-    <p>Logo de seguida, verificamos a localização do host da nossa <a href="https://a22004275-pw-lab1.herokuapp.com">página web</a>.</p>
-    <img src="images/IP-site.png" height="350px" />
-    <p>Uma localização estranha uma vez que mais tarde vamos a perceber que a real lozalização é bem mais perto, na Alemanha.</p>
+    <div class="card">
+        <h2>Rede</h2>
+        <p>Nesta tarefa verificamos o tempo e os pedidos feitos ao servidor</p>
+        <img src="images/rede.png" />
+        <img src="images/cronometragem.png" />
+    </div>
 
-    <hr />
-
-    <h2>Rede</h2>
-    <p>Nesta tarefa verificamos o tempo e os pedidos feitos ao servidor</p>
-    <img src="images/rede.png" height="400px" />
-    <img src="images/cronometragem.png" height="400px" />
-
-    <hr />
-
-    <h2>Percurso</h2>
-    <p>Nesta tarefa verificámos o caminho a percurrer desde o nosso router até à nossa <a href="https://a22004275-pw-lab1.herokuapp.com">página web</a>.</p>
-    <img src="images/traceroute.png" height="400px" />
-    <p>Na imagem acima percebemos que apenas necessitou de 1 salto intermediário antes de chegar ao destino.</p>
+    <div class="card">
+        <h2>Percurso</h2>
+        <p>Nesta tarefa verificámos o caminho a percurrer desde o nosso router até à nossa <a href="https://a22004275-pw-lab1.herokuapp.com">página web</a>.</p>
+        <img src="images/traceroute.png" />
+        <p>Na imagem acima percebemos que apenas necessitou de 1 salto intermediário antes de chegar ao destino.</p>
+    </div>
 </body>
+<footer>
+    <p>Rodrigo Felix - a22004275 - 2021/2022</p>
+</footer>
 </html>
