@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: plum;
+}
+
+#menu {
+    display: block;
+    padding: 15px 15px;
+    background-color: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+#menu img{
+    max-height: 100px;
+    vertical-align: middle;
+}
+
+#menu span{
+    margin: auto 50px;
+}
+
+#menu a{
+    color: #000;
+}
+
+#menu a.active{
+    text-decoration: none;
+}
+
+.card {
+    display: block;
+    margin: 30px auto;
+    width: auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.card h2 {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.card img {
+    display: block;
+    margin: 15px auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.card hr {
+    background-color: #DDD;
+    height: 1px;
+    border: none;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.card iframe {
+    display: block;
+    margin: 15px auto;
+    width: 95%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
