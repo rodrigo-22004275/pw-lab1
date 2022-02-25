@@ -46,6 +46,7 @@ body {
 }
 
 .card h2 {
+    font-size: 24pt;
     text-align: center;
     padding: 10px 0 20px 0;
     font-family: 'Brush Script MT', cursive;
@@ -72,6 +73,56 @@ body {
     margin: 15px auto;
     width: 95%;
     height: 500px;
+    border: none;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.card #galleryP {
+    text-align: center;
+}
+
+.card .gallery {
+    display: inline-block;
+    margin: auto 10px;
+    max-height: 120px;
+    border-radius: 10px;
+}
+
+.card .gallery:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card #galleryIframe {
+    display: block;
+    margin: 20px auto;
+    height: 600px;
+    width: 800px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.card .subtitle {
+    font-size: 20pt;
+    padding: 20px 0 0 20px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.card .poema {
+    text-align: center;
+    line-height: 40px;
+}
+
+.card .hypermenu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card table {
+    display: table;
+    margin: auto;
+    border: 1px solid #333;
+    text-align: center;
 }
