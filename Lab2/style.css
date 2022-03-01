@@ -10,31 +10,31 @@ body {
     background-color: plum;
 }
 
-#menu {
+nav {
     display: block;
     padding: 15px 15px;
     background-color: #FFF;
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 }
 
-#menu img{
+nav img{
     max-height: 100px;
     vertical-align: middle;
 }
 
-#menu span{
+nav span{
     margin: auto 50px;
 }
 
-#menu a{
+nav a{
     color: #000;
 }
 
-#menu a.active{
+nav a.active{
     text-decoration: none;
 }
 
-.card {
+main {
     display: block;
     margin: 30px auto;
     width: auto;
@@ -45,14 +45,14 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
-.card h2 {
+main h2 {
     font-size: 24pt;
     text-align: center;
     padding: 10px 0 20px 0;
     font-family: 'Brush Script MT', cursive;
 }
 
-.card img {
+main img {
     display: block;
     margin: 15px auto;
     max-width: 90%;
@@ -60,7 +60,7 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
-.card hr {
+main hr {
     background-color: #DDD;
     height: 1px;
     border: none;
@@ -68,7 +68,7 @@ body {
     margin: 20px auto;
 }
 
-.card iframe {
+main iframe {
     display: block;
     margin: 15px auto;
     width: 95%;
@@ -78,22 +78,22 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
-.card #galleryP {
+main #galleryP {
     text-align: center;
 }
 
-.card .gallery {
+main .gallery {
     display: inline-block;
     margin: auto 10px;
     max-height: 120px;
     border-radius: 10px;
 }
 
-.card .gallery:hover {
+main .gallery:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.card #galleryIframe {
+main #galleryIframe {
     display: block;
     margin: 20px auto;
     height: 600px;
@@ -104,23 +104,23 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
-.card .subtitle {
+main .subtitle {
     font-size: 20pt;
     padding: 20px 0 0 20px;
     font-family: 'Brush Script MT', cursive;
 }
 
-.card .poema {
+main .poema {
     text-align: center;
     line-height: 40px;
 }
 
-.card .hypermenu {
+main .hypermenu {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.card table {
+main table {
     display: table;
     margin: auto;
     border: 1px solid #333;
