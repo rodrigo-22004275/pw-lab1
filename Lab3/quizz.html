@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rodrigo Felix">
+    <meta name="keywords" content="tokyo, toquio, japan, japão, asia, oriental">
+    <meta name="description" content="Um website dedicado à cidade de Tóquio.">
+    <title>Quizz | Tóquio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <nav id="menu">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/.tokyo_TLD_logo.svg/1200px-.tokyo_TLD_logo.svg.png"  alt="logotipo"/>
+        <span><a href="../index.html">Home</a> | <a href="index.html">Introdução</a> | <a href="local.html">Localização</a> | <a href="multimedia.html">Multimédia</a> | <a href="quizz.html" class="active"><b>Quizz</b></a> | <a href="info.html">Informações</a></span>
+    </nav>
+
+    <main class="card">
+        <h3 class="title">Quizz</h3>
+        <p>Nesta página será feito um quizz para testar o quão bem conhece Tóquio.</p>
+        <form method="POST" action="mailto: a22004275@alunos.ulht.pt" enctype="multipart/form-data">
+            <fieldset>
+                <legend>O quão bem conhece Tóquio</legend>
+                <fieldset>
+                    <legend>Info</legend>
+                    <label>
+                        <input type="text" name="nome" placeholder="Primeiro nome" />
+                    </label>
+                    <label>
+                        <input type="text" name="apelido" placeholder="Apelido" />
+                    </label>
+                    <label>
+                        <input type="email" name="email" placeholder="Endereço e-mail" />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Perguntas</legend>
+                    <label>
+                        Qual o país de origem?
+                        <input type="text" name="pais" placeholder="País de origem" maxlength="5" autofocus autocomplete="off" required />
+                    </label>
+                    <label>
+                        Em que continente se situa?
+                        <input type="radio" name="continente1" value="americas" /> Américas
+                        <input type="radio" name="continente2" value="europa" /> Europa
+                        <input type="radio" name="continente3" value="africa" /> África
+                        <input type="radio" name="continente4" value="asia" /> Ásia
+                        <input type="radio" name="continente5" value="oceania" /> Oceania
+                    </label>
+                    <label>
+                        Tóquio é<br />
+                        <input type="checkbox" name="opcao1" value="mToquio"> Metrópole de Tóquio<br />
+                        <input type="checkbox" name="opcao2" value="cJapao"> Capital do Japão<br />
+                        <input type="checkbox" name="opcao3" value="honshu"> Situada em Honshu<br />
+                    </label>
+                    <label>
+                        Em que ano foi fundada Tóquio
+                        <input list="anos" name="ano">
+                        <datalist id="anos">
+                            <option value="1923">
+                            <option value="1457">
+                            <option value="1868 ">
+                            <option value="2015">
+                        </datalist>
+                    </label>
+                    <label>
+                        Para além de branco, qual outra cor está na bandeira?
+                        <input type="color" name="flagcolor" value="#FFFFFF" required>
+                    </label>
+                    <label>
+                        Quando se tornou a capital imperial?
+                        <input type="number" name="capitalAno" placeholder="Ano" min="1800" max="1900" required>
+                    </label>
+                    <label>
+                        Qual a extensão para ‘websites’ japoneses?
+                        <input type="text" name="extensao" placeholder="www.site.?" pattern="[A-Za-z]{2}" required>
+                    </label>
+                </fieldset>
+            </fieldset>
+        </form>
+    </main>
+<footer>
+    <p>Rodrigo Felix - a22004275 - 2021/2022</p>
+</footer>
+</body>
+</html>

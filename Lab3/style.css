@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: plum;
+}
+
+nav {
+    display: block;
+    padding: 15px 15px;
+    background-color: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+nav img{
+    max-height: 100px;
+    vertical-align: middle;
+}
+
+nav span{
+    margin: auto 50px;
+}
+
+nav a{
+    color: #000;
+}
+
+nav a.active{
+    text-decoration: none;
+}
+
+main {
+    display: block;
+    margin: 30px auto;
+    width: auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+main .title {
+    font-size: 24pt;
+    text-align: center;
+    padding: 10px 0 20px 0;
+    font-family: 'Brush Script MT', cursive;
+}
+
+main img {
+    display: block;
+    margin: 15px auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+main figcaption {
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+main hr {
+    background-color: #DDD;
+    height: 1px;
+    border: none;
+    width: 100%;
+    margin: 20px auto;
+}
+
+main iframe {
+    display: block;
+    margin: 15px auto;
+    width: 95%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+main #galleryP {
+    text-align: center;
+}
+
+main .gallery {
+    display: inline-block;
+    margin: auto 10px;
+    max-height: 120px;
+    border-radius: 10px;
+}
+
+main .gallery:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+main #galleryIframe {
+    display: block;
+    margin: 20px auto;
+    height: 600px;
+    width: 800px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+main .subtitle {
+    font-size: 20pt;
+    padding: 20px 0 0 20px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+main .poema {
+    text-align: center;
+    line-height: 40px;
+}
+
+main .hypermenu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main table {
+    display: table;
+    margin: auto;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+main form {
+    display: block;
+    margin: 20px auto;
+}
+
+main form fieldset{
+    border-radius: 10px;
+}
+
+main form legend {
+    font-style: italic;
+}
+
+main form label{
+    display: block;
+    margin: 5px auto;
+}
+
+footer {
+    padding: 30px 10px;
+    background-color: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+footer p{
+    text-align: center;
+}
