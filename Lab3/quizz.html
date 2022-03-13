@@ -7,21 +7,21 @@
     <meta name="description" content="Um website dedicado à cidade de Tóquio.">
     <title>Quizz | Tóquio</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
 </head>
 <body>
     <nav id="menu">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/.tokyo_TLD_logo.svg/1200px-.tokyo_TLD_logo.svg.png"  alt="logotipo"/>
-        <span><a href="../index.html">Home</a> | <a href="index.html">Introdução</a> | <a href="local.html">Localização</a> | <a href="multimedia.html">Multimédia</a> | <a href="quizz.html" class="active"><b>Quizz</b></a> | <a href="info.html">Informações</a></span>
+        <span><a class="home" href="../index.html">Home</a> | <a class="intro" href="index.html"><b>Introdução</b></a> | <a class="local" href="local.html">Localização</a> | <a class="multi" href="multimedia.html">Multimédia</a> | <a class="quizz" href="quizz.html">Quizz</a> | <a class="html" href="html5-css.html">HTML5</a> | <a class="info" href="info.html">Informações</a></span>
     </nav>
 
     <main class="card">
         <h3 class="title">Quizz</h3>
         <p>Nesta página será feito um quizz para testar o quão bem conhece Tóquio.</p>
-        <form method="POST" action="mailto: a22004275@alunos.ulht.pt" enctype="multipart/form-data">
+        <form id="quiz" method="POST" action="mailto: a22004275@alunos.ulht.pt" enctype="multipart/form-data">
             <fieldset>
                 <legend>O quão bem conhece Tóquio</legend>
-                <fieldset>
+                <fieldset class="contacto">
                     <legend>Info</legend>
                     <label>
                         <input type="text" name="nome" placeholder="Primeiro nome" />
@@ -33,7 +33,7 @@
                         <input type="email" name="email" placeholder="Endereço e-mail" />
                     </label>
                 </fieldset>
-                <fieldset>
+                <fieldset class="perguntas">
                     <legend>Perguntas</legend>
                     <label>
                         Qual o país de origem?
@@ -55,7 +55,7 @@
                     </label>
                     <label>
                         Em que ano foi fundada Tóquio
-                        <input list="anos" name="ano">
+                        <input list="anos" name="ano" placeholder="Escolher ano">
                         <datalist id="anos">
                             <option value="1923">
                             <option value="1457">
@@ -75,8 +75,20 @@
                         Qual a extensão para ‘websites’ japoneses?
                         <input type="text" name="extensao" placeholder="www.site.?" pattern="[A-Za-z]{2}" required>
                     </label>
+                    <label>
+                        Qual o idioma falado em Tóquio?
+                        <select name="idioma">
+                            <option value="jp">Japonês</option>
+                            <option value="ch">Chinês</option>
+                            <option value="en">Inglês</option>
+                            <option value="kr">Coreano</option>
+                        </select>
+                    </label>
+                    <label for="com">Dê uma opinião sobre este quiz</label>
+                    <textarea id="com" maxlength="340" placeholder="Pode escrever até 340 caracteres"></textarea>
                 </fieldset>
             </fieldset>
+            <input type="submit" value="Submeter" />
         </form>
     </main>
 <footer>

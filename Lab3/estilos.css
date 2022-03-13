@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&family=Lato&display=swap');
 * {
     margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -22,16 +23,49 @@ nav img{
     vertical-align: middle;
 }
 
-nav span{
+nav > span{
     margin: auto 50px;
 }
 
 nav a{
     color: #000;
+    text-decoration: none;
+}
+
+nav a.home::before {
+    content: "🏡 ";
+}
+
+nav a.intro::before {
+    content: "💬 ";
+}
+
+nav a.local::before {
+    content: "🗺 ";
+}
+
+nav a.multi::before {
+    content: "📷 ";
+}
+
+nav a.quizz::before {
+    content: "❓ ";
+}
+
+nav a.html::before {
+    content: "👨‍💻 ";
+}
+
+nav a.info::before {
+    content: "ℹ️ ";
 }
 
 nav a.active{
-    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:active{
+    color: mediumpurple;
 }
 
 main {
@@ -45,11 +79,16 @@ main {
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
-main .title {
+main > .title {
     font-size: 24pt;
     text-align: center;
     padding: 10px 0 20px 0;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'El Messiri', sans-serif;
+}
+
+main p#introP::first-letter {
+    font-size: 24pt;
+    font-family: 'El Messiri', sans-serif;
 }
 
 main img {
@@ -113,7 +152,7 @@ main #galleryIframe {
 main .subtitle {
     font-size: 20pt;
     padding: 20px 0 0 20px;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'El Messiri', sans-serif;
 }
 
 main .poema {
@@ -142,8 +181,25 @@ main form fieldset{
     border-radius: 10px;
 }
 
+main form fieldset.contacto{
+    background-color: #DDD;
+}
+
+main form fieldset.perguntas{
+    background-color: plum;
+}
+
 main form legend {
     font-style: italic;
+}
+
+main form input, main form select {
+    display: block;
+    margin-top: 5px;
+}
+
+main form label {
+    padding-top: 10px;
 }
 
 main form label{
