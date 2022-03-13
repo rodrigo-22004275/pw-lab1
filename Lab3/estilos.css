@@ -207,6 +207,10 @@ main form label{
     margin: 5px auto;
 }
 
+section > table {
+    margin: 10px auto 20px auto;
+}
+
 footer {
     padding: 30px 10px;
     background-color: #FFF;
