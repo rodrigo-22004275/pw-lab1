@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    padding: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu a:hover {
+    color: #888;
+    font-weight: bold;
+}
+
+.menu a:last-child {
+    margin-left: auto;
+}
+
+header > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.capitais {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: #b1c5d4;
+}
+
+.capitais > div {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 10px;
+}
+
+.capitais img{
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+}
+
+.capitais div div:last-child {
+    width: 150px;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dicas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b1c5d4;
+    padding: 20px 10px;
+}
+
+.dicas div {
+    margin: 10px;
+    width: 350px;
+    height: 300px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.destinos {
+    display: grid;
+    background-color: #b1c5d4;
+    padding: 20px 10px;
+}
+
+.destinos div {
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.destinos .card {
+    min-width: 200px;
+    min-height: 250px;
+    padding: 10px 20px;
+}
+
+.destinos div > p {
+    font-family: 'Abril Fatface', cursive;
+    color: #FFF;
+}
+
+.piodao {
+    background: #000 url("images/piodao.jpeg") no-repeat center ;
+    grid-area: piodao;
+}
+
+.obidos {
+    background: #000 url("images/vila-obidos-portugal.jpg") no-repeat center;
+    grid-area: obidos;
+}
+
+.estrela {
+    background: #000 url("images/serra-estrela.jpg") no-repeat center;
+    grid-area: estrela;
+}
+
+.monsaraz {
+    background: #000 url("images/monsaraz.jpg") no-repeat center;
+    grid-area: monsaraz;
+}
+
+.sagres {
+    background: #000 url("images/ponta-sagres-fortaleza.jpg") no-repeat center;
+    grid-area: sagres;
+}
+
+.destinos .card p:first-child {
+    position: static;
+    top: 10px;
+    left: 10px;
+    height: 200px;
+    font-size: 18px;
+}
+
+.destinos .card p:last-child {
+    position: relative;
+    bottom: 0;
+    font-size: 24px;
+}
+
+.arrabida div {
+    box-shadow: none;
+}
+
+.arrabida > div:first-child {
+    grid-area: image;
+}
+
+.arrabida > div:first-child > img {
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.arrabida > div:nth-child(2) {
+    grid-area: text;
+}
+
+.arrabida > div:nth-child(2) p {
+    grid-area: text;
+    color: #000;
+    margin: 10px;
+}
+
+.arrabida > div:last-child {
+    grid-area: button;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.arrabida {
+    background-color: #FFF;
+    grid-area: arrabida;
+    display: grid;
+    grid-template-areas: 'image image'
+                         'text button';
+}
+
+@media (min-width: 901px) {
+    .destinos {
+        grid-gap: 10px;
+        grid-template-areas: 'piodao obidos monsaraz arrabida'
+                             'estrela estrela sagres arrabida';
+    }
+}
+
+@media (max-width: 900px) {
+    .destinos {
+        grid-gap: 10px;
+        grid-template-areas: 'piodao obidos'
+                             'arrabidas estrela'
+                             'sagres arrabida';
+    }
+}

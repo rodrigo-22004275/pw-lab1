@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+* {
+    box-sizing: border-box;
+    margin: auto;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, hsla(211, 66%, 87%, 1) 0%, hsla(348, 67%, 88%, 1) 50%, hsla(272, 26%, 72%, 1) 100%) no-repeat;
+    height: 100vh;
+}
+
+header, main, aside, footer {
+    border-radius: 20px;
+    background-color: #FFF;
+    padding: 10px;
+    width: 100%;
+}
+
+.grid > header {
+    grid-area: header;
+    text-align: center;
+}
+
+.grid > main {
+    grid-area: main;
+    height: 300px;
+}
+
+.grid > main li {
+    margin: 10px auto;
+}
+
+.grid > main a {
+    text-decoration: none;
+    color: black;
+}
+
+.grid > main a:hover {
+    color: purple;
+}
+
+.grid > aside {
+    grid-area: aside;
+    height: 300px;
+}
+
+.grid > aside img {
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+
+.grid > footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: grid;
+    width: 90%;
+    max-width: 500px;
+    grid-template-areas: 'header header'
+                         'aside main'
+                         'footer footer';
+    gap: 10px;
+}
+
+ @media (min-width: 901px) {
+    .grid > main {
+        height: 300px;
+    }
+
+    .grid > aside {
+        height: 300px;
+    }
+
+    .grid {
+        grid-template-areas: 'header header'
+                             'aside main'
+                             'footer footer';
+    }
+ }
+
+ @media (max-width: 900px) {
+    .grid > main {
+        height: 300px;
+    }
+
+    .grid > aside {
+        height: 300px;
+    }
+
+    .grid {
+        grid-template-areas: 'header'
+                             'main'
+                             'aside'
+                             'footer';
+    }
+ }
