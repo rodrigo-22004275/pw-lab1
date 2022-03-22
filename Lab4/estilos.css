@@ -13,6 +13,7 @@
 
 .menu a {
     padding: 20px;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
 }
@@ -30,6 +31,10 @@ header > div{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.title {
+    margin: 30px auto 15px 15px;
 }
 
 .capitais {
