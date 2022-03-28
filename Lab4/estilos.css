@@ -85,7 +85,7 @@ header > div{
     padding: 10px 20px;
     border-radius: 20px;
     background: #FFF;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 }
 
 .destinos {
@@ -95,8 +95,9 @@ header > div{
 }
 
 .destinos div {
+    position: relative;
     border-radius: 10px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 }
 
 .destinos .card {
@@ -108,6 +109,7 @@ header > div{
 .destinos div > p {
     font-family: 'Abril Fatface', cursive;
     color: #FFF;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .piodao {
@@ -138,14 +140,15 @@ header > div{
 .destinos .card p:first-child {
     position: static;
     top: 10px;
-    left: 10px;
+    left: 5px;
     height: 200px;
     font-size: 18px;
 }
 
 .destinos .card p:last-child {
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
     font-size: 24px;
 }
 
@@ -170,12 +173,37 @@ header > div{
     grid-area: text;
     color: #000;
     margin: 10px;
+    text-shadow: none;
 }
 
 .arrabida > div:last-child {
+    display: flex;
     grid-area: button;
     align-items: center;
     justify-content: space-around;
+}
+
+.arrabida > div:last-child button {
+    grid-area: button;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #FFF;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.arrabida > div:last-child button:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    background-color: #333;
+}
+
+.arrabida > div:last-child button:active {
+    box-shadow: inset rgba(149, 157, 165, 0.2) 0 8px 24px;
+    background-color: #DDD;
+    color: #333;
 }
 
 .arrabida {
@@ -198,7 +226,7 @@ header > div{
     .destinos {
         grid-gap: 10px;
         grid-template-areas: 'piodao obidos'
-                             'arrabidas estrela'
+                             'monsaraz estrela'
                              'sagres arrabida';
     }
 }
