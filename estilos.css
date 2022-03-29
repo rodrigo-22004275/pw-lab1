@@ -3,102 +3,136 @@
     box-sizing: border-box;
     margin: auto;
     font-family: 'Nunito', sans-serif;
+    transition: all .5s;
 }
 
 body {
     background: linear-gradient(90deg, hsla(211, 66%, 87%, 1) 0%, hsla(348, 67%, 88%, 1) 50%, hsla(272, 26%, 72%, 1) 100%) no-repeat;
-    height: 100vh;
 }
 
-header, main, aside, footer {
-    border-radius: 20px;
-    background-color: #FFF;
-    padding: 10px;
+header {
+    height: 90vh;
+    position: relative;
+}
+
+header > video {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
-.grid > header {
-    grid-area: header;
+header > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: #FFF;
+    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+header > p {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
     text-align: center;
+    font-size: 24px;
+    color: #FFF;
+    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
 }
 
-.grid > main {
-    grid-area: main;
-    height: 300px;
+header > button {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #FFF;
+    border-radius: 15px;
+    background: rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    cursor: pointer;
+    animation: mudarRadius 2.5s ease infinite;
 }
 
-.grid > main li {
-    margin: 10px auto;
+header > button a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
 }
 
-.grid > main a {
+header > button:hover {
+    background: rgba(0,0,0,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation-play-state: paused;
+}
+
+@keyframes mudarRadius
+{
+    0% { border-radius: 15px; }
+    50% { border-radius: 25px; }
+    100% { border-radius: 15px; }
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main > div {
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+main > #links li {
+    margin: 15px auto;
+}
+
+main > #github p:first-child {
+    font-size: 24px;
+}
+
+main > #github p:last-child {
+    margin-top: 25px;
+}
+
+main a {
     text-decoration: none;
     color: black;
 }
 
-.grid > main a:hover {
-    color: purple;
+main a:hover {
+    color: #00bdbd;
 }
 
-.grid > aside {
-    grid-area: aside;
-    height: 300px;
+#github a {
+    text-decoration: underline;
 }
 
-.grid > aside img {
-    display: block;
-    margin: auto;
-    height: 100%;
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    font-size: .8em;
 }
-
-.grid > footer {
-    grid-area: footer;
-    text-align: center;
-}
-
-.grid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    display: grid;
-    width: 90%;
-    max-width: 500px;
-    grid-template-areas: 'header header'
-                         'aside main'
-                         'footer footer';
-    gap: 10px;
-}
-
- @media (min-width: 901px) {
-    .grid > main {
-        height: 300px;
-    }
-
-    .grid > aside {
-        height: 300px;
-    }
-
-    .grid {
-        grid-template-areas: 'header header'
-                             'aside main'
-                             'footer footer';
-    }
- }
-
- @media (max-width: 900px) {
-    .grid > main {
-        height: 300px;
-    }
-
-    .grid > aside {
-        height: 300px;
-    }
-
-    .grid {
-        grid-template-areas: 'header'
-                             'main'
-                             'aside'
-                             'footer';
-    }
- }

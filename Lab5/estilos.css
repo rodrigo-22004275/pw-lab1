@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body > div:first-child {
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+    grid-template-columns: 1fr;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    background: #FFF;
+    z-index: 1;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .menu {
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.menu a {
+    padding: 20px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu a:hover {
+    color: #888;
+    font-weight: bold;
+}
+
+.menu a:last-child {
+    margin-left: auto;
+}
+
+header {
+    height: 90vh;
+}
+
+header > video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+header > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: #FFF;
+}
+
+@keyframes mudarFonte
+{
+    0% { font-family: 'Palette Mosaic', cursive; }
+    20% { font-family: 'Permanent Marker', cursive; }
+    40% { font-family: 'Abril Fatface', cursive; }
+    60% { font-family: 'Permanent Marker', cursive; }
+    80% { font-family: 'Abril Fatface', cursive; }
+    100% { font-family: 'Palette Mosaic', cursive; }
+}
+
+header > h1 > span {
+    text-decoration: underline;
+    animation: mudarFonte 2.5s ease infinite;
+}
+
+.title {
+    padding: 30px 15px;
+    background: #FFF;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .title {
+    background: rgba(255,255,255,0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.capitais {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: #b1c5d4;
+}
+
+.capitais > div {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    margin: 10px;
+}
+
+.capitais img{
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+}
+
+.capitais div div:last-child {
+    width: 150px;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dicas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b1c5d4;
+    padding: 20px 10px;
+}
+
+.dicas div {
+    margin: 10px;
+    width: 350px;
+    height: 300px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+.destinos {
+    display: grid;
+    background-color: #b1c5d4;
+    padding: 20px 10px;
+}
+
+.destinos div {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+.destinos .card {
+    min-width: 200px;
+    min-height: 250px;
+    padding: 10px 20px;
+}
+
+.destinos div > p {
+    font-family: 'Abril Fatface', cursive;
+    color: #FFF;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.piodao {
+    background: #000 url("images/piodao.jpeg") no-repeat center ;
+    grid-area: piodao;
+}
+
+.obidos {
+    background: #000 url("images/vila-obidos-portugal.jpg") no-repeat center;
+    grid-area: obidos;
+}
+
+.estrela {
+    background: #000 url("images/serra-estrela.jpg") no-repeat center;
+    grid-area: estrela;
+}
+
+.monsaraz {
+    background: #000 url("images/monsaraz.jpg") no-repeat center;
+    grid-area: monsaraz;
+}
+
+.sagres {
+    background: #000 url("images/ponta-sagres-fortaleza.jpg") no-repeat center;
+    grid-area: sagres;
+}
+
+.destinos .card p:first-child {
+    position: static;
+    top: 10px;
+    left: 5px;
+    height: 200px;
+    font-size: 18px;
+}
+
+.destinos .card p:last-child {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    font-size: 24px;
+}
+
+.arrabida div {
+    box-shadow: none;
+}
+
+.arrabida > div:first-child {
+    grid-area: image;
+}
+
+.arrabida > div:first-child > img {
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.arrabida > div:nth-child(2) {
+    grid-area: text;
+}
+
+.arrabida > div:nth-child(2) p {
+    grid-area: text;
+    color: #000;
+    margin: 10px;
+    text-shadow: none;
+}
+
+.arrabida > div:last-child {
+    display: flex;
+    grid-area: button;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.arrabida > div:last-child button {
+    grid-area: button;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #FFF;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.arrabida > div:last-child button:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    background-color: #333;
+}
+
+.arrabida > div:last-child button:active {
+    box-shadow: inset rgba(149, 157, 165, 0.2) 0 8px 24px;
+    background-color: #DDD;
+    color: #333;
+}
+
+.arrabida {
+    background-color: #FFF;
+    grid-area: arrabida;
+    display: grid;
+    grid-template-areas: 'image image'
+                         'text button';
+}
+
+.fotos {
+    display: grid;
+    background-color: #b1c5d4;
+    padding: 20px 10px;
+}
+
+.fotos > div {
+    margin: 10px;
+    position: relative;
+    border-radius: 20px;
+    height: 200px;
+}
+
+.fotos > div:hover {
+    background-color: #000;
+}
+
+.fotos div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    transition: opacity 1s;
+}
+
+.fotos div img:hover {
+    opacity: 0.5;
+}
+
+.fotos div p {
+    background: #FFF;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-weight: 500;
+    text-align: right;
+    border-radius: 0 0 20px 20px;
+    padding: 5px 15px;
+    transition: display 1s;
+    visibility: hidden;
+}
+
+.fotos div:hover p {
+    visibility: visible;
+}
+
+.animacoes {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    background-color: #b1c5d4;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.animacoes > div {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.animacoes > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 1s;
+}
+
+.animacoes > div:first-child img {
+    animation-name: rodar;
+    border-radius: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.animacoes > div.anim2 img {
+    animation-name: tamanho;
+}
+
+.animacoes > div.anim3 img {
+    animation-name: radius;
+}
+
+.animacoes > div.anim4 img {
+    animation-name: rodarInv;
+    border-radius: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+@keyframes rodar {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
+@keyframes tamanho {
+    0% { width: 200px; height: 200px;}
+    50% { width: 400px; height: 300px; }
+    100% { width: 200px; height: 200px;}
+}
+
+@keyframes radius {
+    0% { border-radius: 5px; }
+    50% { border-radius: 50px; }
+    100% { border-radius: 5px; }
+}
+
+@keyframes rodarInv {
+    to { transform: rotate(0deg) }
+    from { transform: rotate(360deg) }
+}
+
+@media (min-width: 901px) {
+    .destinos {
+        grid-gap: 10px;
+        grid-template-areas: 'piodao obidos monsaraz arrabida'
+                             'estrela estrela sagres arrabida';
+    }
+
+    .fotos {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        background: url('https://uibswiss.ch/wp-content/uploads/2016/01/00_Top-Travel-Trends-for-2018_209155915_06photo_FT.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    header > video {
+        display: none;
+    }
+
+    header > h1 {
+        font-size: 32px;
+    }
+
+    .destinos {
+        grid-gap: 10px;
+        grid-template-areas: 'piodao obidos'
+                             'monsaraz estrela'
+                             'sagres arrabida';
+    }
+
+    .fotos {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .fotos {
+        grid-template-columns: auto;
+    }
+}
