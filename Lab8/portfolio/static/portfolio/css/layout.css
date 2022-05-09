@@ -130,6 +130,10 @@ main {
     END OF HERO PAGE
  */
 
+.title {
+    font-size: 2em;
+}
+
 .listagem {
     display: flex;
     flex-flow: row wrap;
@@ -142,10 +146,87 @@ main {
 .listagem div {
     margin: 10px;
     width: 350px;
-    height: 200px;
+    min-height: 200px;
     padding: 10px 20px;
     border-radius: 20px;
     background: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+.listagem div > a, .listagem div > i{
+    margin: 20px;
+}
+
+form {
+    display: block;
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+form > p, form > label {
+    display: block;
+    margin-top: 15px;
+}
+
+form label > label {
+    display: block;
+    margin-top: 5px;
+}
+
+form input, form select {
+    margin: 5px 0;
+    border: 1px solid #DDD;
+}
+
+.form-control {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.helptext {
+    font-size: 0.8em;
+    color: #AAA;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #60ac53;
+    color: #FFF;
+}
+
+.btn-success {
+    margin-top: 10px;
+    background-color: #60ac53;
+    color: #FFF;
+}
+
+.btn-reset {
+    margin-top: 5px;
+    background-color: darkgray;
+    color: #FFF;
+}
+
+.btn-success:hover {
+    cursor: pointer;
+    background-color: #60ac99;
+}
+
+.btn-reset:hover {
+    cursor: pointer;
+    background-color: lightslategray;
+}
+
+.grafico {
+    display: block;
+    margin: 30px auto 0 auto;
+    border-radius: 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 }
 
